@@ -1,0 +1,53 @@
+/* Page Menu and Site Maps */
+
+.pagemenu img, .sitemap img, .childsitemap img {display: none;}
+
+.pagemenu  
+{
+    margin: 5px 0 20px 1px; padding: 5px;
+	font-size: 1.1em;
+	background-color: #f0f0f0;
+	border: 1px solid #fff; border-width: 1px 0 0 1px;
+	outline: 1px solid #ddd;
+    }
+	
+.sitemap,
+.childsitemap { margin: 5px 0 20px 1px; padding: 5px; }
+
+.pagemenu  ul , .sitemap ul, .childsitemap ul{
+    list-style: none;
+    margin: 0; padding: 0;
+    }
+
+.sub-nav a.AspNet-TreeView-Collapse,
+.sub-nav a.AspNet-TreeView-Expand,
+.sub-nav a.AspNet-TreeView-Collapse:hover,
+.sub-nav a.AspNet-TreeView-Expand:hover{	
+	float: left;
+	min-height: 15px;
+	min-width: 15px;
+	padding-top:1px;
+	padding-right: 5px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: default;
+	}
+	
+.sub-nav a.AspNet-TreeView-Collapse { background-image: url('img/collapse.gif');}
+.sub-nav a.AspNet-TreeView-Expand { background-image: url('img/expand.gif'); }
+
+.sitemap .sub-nav a.AspNet-TreeView-Collapse, .sitemap .sub-nav a.AspNet-TreeView-Expand { padding-top:3px; padding-right: 1px; }
+
+ul.sub-nav  ul.subs{margin-left: 20px;}
+.sitemap ul.sub-nav  ul.subs{margin-left: 30px;}
+
+.sub-nav .tree-root{padding-left: 20px;}
+
+.sub-nav .tree-root + .tree-leaf 
+{ padding-left: 20px; }
+.sub-nav .tree-selected > a{font-weight: bold; }
+.sub-nav .tree-child-selected > a{font-style: italic; }
+
+
+

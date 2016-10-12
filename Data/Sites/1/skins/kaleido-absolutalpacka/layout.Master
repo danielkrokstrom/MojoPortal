@@ -1,6 +1,6 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="mojoPortal.Web.layout" %>
 <!DOCTYPE html>
-<html dir="ltr" lang="sv-SE">
+<html dir="ltr" lang="en-US">
 <head id="Head1" runat="server">
     <meta charset="utf-8">
     <title></title>
@@ -16,7 +16,7 @@
         JQueryUIThemeName="sunny" UseIconsForAdminLinks="false" UseTextLinksForFeatureSettings="true" />
     <portal:IEStyleIncludes ID="IEStyleIncludes1" runat="server" IncludeHtml5Script="true" IncludeIETransitionMeta="true"
         IE6CssFile="style.ie6.css" IE7CssFile="style.ie7.css" />
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento+Sans&amp;subset=latin"><portal:Favicon ID="Favicon1" runat="server" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Carme|PT+Sans&amp;subset=latin"><portal:Favicon ID="Favicon1" runat="server" />
 <portal:ScriptLoader ID="ScriptLoader1" runat="server"  />
 <portal:SkinFolderScript ID="sfs1" runat="server" ScriptFileName="script.js" AddToCombinedScript="false" />
 <portal:SkinFolderScript ID="sfs2" runat="server" ScriptFileName="script.responsive.js" AddToCombinedScript="false" />
@@ -31,33 +31,31 @@
     <asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
     <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true" />
 	<div id="art-main">
-        <div class="art-logo">
-            <asp:HyperLink runat="server" ID="logo" Visible="true" ImageUrl="~/Data/Sites/1/media/futuregrass.png" NavigateUrl="~"></asp:HyperLink>
-        </div>
-	    <div>
+
 <header class="art-header">
+
     <div class="art-shapes">
-        
-            </div>
+    </div>
 
 <h1 class="art-headline">
-    <portal:sitetitle id="SiteTitle" runat="server" Visible="false" includestandardclasses="false" cssclass="art-headline"></portal:sitetitle>
+    <asp:HyperLink runat="server" ID="HyperLink1" Visible="true" ImageUrl="~/Data/Sites/1/media/absolutalpacka-logo.png" NavigateUrl="~"></asp:HyperLink>
+    <portal:sitetitle id="SiteTitle" Visible="false" runat="server" includestandardclasses="false" cssclass="art-headline"></portal:sitetitle>
 </h1>
 <h2 class="art-slogan"><portal:siteslogan id="ss1" runat="server"></portal:siteslogan>
 </h2>
-             
+                 
 </header>
 <nav class="art-nav clearfix">
 <div class="art-nav-inner">
 <portal:skiplink id="SkipLink1" runat="server"></portal:skiplink>
-<portal:sitemenu id="SiteMenu1" runat="server" useflexmenu="true" hidemenuonsitemap="false" Visible="true"></portal:sitemenu>
+<portal:sitemenu id="SiteMenu1" runat="server" useflexmenu="true" hidemenuonsitemap="false"></portal:sitemenu>
 </div>
 </nav>
 <div class="art-sheet clearfix">
             <div class="art-layout-wrapper">
                 <div class="art-content-layout">
 	<div class="art-content-layout-row">
-		<portal:layoutpanel id="divLeft" runat="server" cssclass="art-layout-cell art-sidebar1 leftside" visible="False" skinid="pnlPlain">
+		<portal:layoutpanel id="divLeft" runat="server" cssclass="art-layout-cell art-sidebar1 leftside" visible="True" skinid="pnlPlain">
 			<portal:pagemenu id="PageMenu1" runat="server" useflexmenu="true"></portal:pagemenu>
 			<asp:contentplaceholder id="leftContent" runat="server">
 			</asp:contentplaceholder>
@@ -75,27 +73,28 @@
 		</portal:layoutpanel>
 	</div>
 </div>
-            </div><footer class="art-footer clearfix">
+</div>
+<footer class="art-footer clearfix">
 	<div class="art-footer-body">
-	<div class="art-footer-center">
-            <b>Futuregrass Scandinavia AB&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;VALLÅS GÅRD, 511 58 Kinna&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;070&nbsp;-&nbsp;531&nbsp;36&nbsp;63</b><br /><br />
-    </div>
-	<div class="art-footer-wrapper">
-		<div class="art-footer-text">
-			<p>
-				<portal:sitemaplink id="SiteMapLink1" runat="server" cssclass="sitemaplink"></portal:sitemaplink>
-				|
-				<portal:skinpreview id="SkinPreview1" runat="server"></portal:skinpreview>
-				|
-				<portal:copyrightlabel id="cl1" runat="server" showyear="true" beginyear="1999"></portal:copyrightlabel>
-                |    
-                <portal:SearchInput ID="SearchInput1" LinkOnly="True" RenderAsListItem="false" runat="server" />
-                | 
-                <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" />
-				<portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
-                |
-                <a href="http://www.kaleidoreklam.se" target="_blank" >Produktion Kaleido Reklambyrå AB</a>
-				</p>
+	    <div class="art-footer-center">
+            <div>
+                <b>Absolut Alpacka&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;Kulla 1 Ginkalunda, 511 56 Kinna&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@absolutalpacka.se">info@absolutalpacka.se</a></b><br /><br />
+            </div>
+	        <div class="art-footer-wrapper"> 
+		        <div class="art-footer-text">
+			    <p>
+				    <portal:sitemaplink id="SiteMapLink1" runat="server" cssclass="sitemaplink"></portal:sitemaplink>
+				    |
+				    <portal:skinpreview id="SkinPreview1" runat="server"></portal:skinpreview>
+				    |
+				    <portal:copyrightlabel id="cl1" runat="server" showyear="true" beginyear="2003"></portal:copyrightlabel>
+                    |    
+                    <portal:SearchInput ID="SearchInput1" LinkOnly="True" RenderAsListItem="false" runat="server" />
+                    | 
+                    <portal:LoginLink ID="LoginLink1" runat="server" RenderAsListItem="false" Visible="false" />
+				    <portal:LogoutLink ID="LogoutLink1" runat="server" RenderAsListItem="false" />
+                    <a href="http://www.kaleidoreklam.se" target="_blank" >Produktion Kaleido Reklambyrå AB</a>
+		        </p>
 		</div>
 	</div>
 	</div>
@@ -113,10 +112,12 @@
 				<portal:HomeLink ID="HomeLink" runat="server" RenderAsListItem="true" Visible="false" />
 				<portal:MobileSkinLink ID="mobileskin" runat="server" RenderAsListItem="true" />
 				<portal:SiteMapLink ID="SiteMapLink2" runat="server" CssClass="sitelink" RenderAsListItem="true" Visible="false" />
+				<portal:UserProfileLink ID="UserProfileLink" runat="server" RenderAsListItem="true" />
 				<portal:MemberListLink ID="MemberListLink" runat="server" RenderAsListItem="true" />
 				<portal:MyPageLink ID="MyPageLink1" runat="server" RenderAsListItem="true" />
-				<portal:UserProfileLink ID="UserProfileLink" runat="server" RenderAsListItem="true" />
+				
 				<portal:MailboxLink ID="MailboxLink1" runat="server" RenderAsListItem="true" />
+				
 			</ul>
 		</div>
 	</div>

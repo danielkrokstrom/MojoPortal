@@ -36,7 +36,9 @@
     <div class="art-shapes">
     </div>
 
-<h1 class="art-headline"><portal:sitetitle id="SiteTitle" runat="server" includestandardclasses="false" cssclass="art-headline"></portal:sitetitle>
+<h1 class="art-headline">
+    <asp:HyperLink runat="server" ID="HyperLink1" Visible="true" ImageUrl="~/data/sites/1/skins/kaleido-dalenbergs/images/logo.png" NavigateUrl="~"></asp:HyperLink>
+    <portal:sitetitle id="SiteTitle" Visible="false" runat="server" includestandardclasses="false" cssclass="art-headline"></portal:sitetitle>
 </h1>
 <h2 class="art-slogan"><portal:siteslogan id="ss1" runat="server"></portal:siteslogan>
 </h2>

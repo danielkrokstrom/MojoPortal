@@ -42,8 +42,7 @@
     <portal:sitetitle id="SiteTitle" runat="server" Visible="false" includestandardclasses="false" cssclass="art-headline"></portal:sitetitle>
 </h1>
 <h2 class="art-slogan"><portal:siteslogan id="ss1" runat="server" Visible="false"></portal:siteslogan>
-</h2>
-             
+</h2>           
 </header>
 <nav class="art-nav clearfix">
 <div class="art-nav-inner">
@@ -51,6 +50,7 @@
 <portal:sitemenu id="SiteMenu1" runat="server" useflexmenu="true" hidemenuonsitemap="false"></portal:sitemenu>
 </div>
 </nav>
+<div id="galleryNivo"><portal:NivoSlider ID="NivoSlider1" runat="server" ImageFolder='~/Data/Sites/1/media/SlideShow' ImageWidth='100%' config = "effect: 'fade', pauseTime: 10000" /></div>
 <div class="art-sheet clearfix">
             <div class="art-layout-wrapper">
                 <div class="art-content-layout">
